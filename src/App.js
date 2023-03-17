@@ -2,7 +2,9 @@
 function App() {
   return (
     <div className="App">
-        <h1>OrderFood</h1>
+        <h1 className="text-3xl font-bold underline">
+          OrderFood
+        </h1>
     </div>
   );
 }
