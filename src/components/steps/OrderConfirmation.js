@@ -29,27 +29,27 @@ const OrderConfirmation = ({address,pincode,order}) => {
                 <div className="grid grid-cols-3 gap-10 rounded font-sans border-2 border-gray-100 p-5">
                 <div>
                     <h2 className="text-md font-medium mb-4">Starters</h2>
-                    {order?.starters.map((starter) => 
+                    {order?.starters.map((starter,index) => 
                     (<div key={starter.id} className="flex items-center mb-2">
 
-                            <label htmlFor={`starter-${starter.id}`}>{starter.id}. {starter.name} - {starter.price}</label>
+                            <label htmlFor={`starter-${starter.id}`}>{index+1}. {starter.name} - {starter.price}</label>
                         </div>)
                     )}
                 </div>
                 <div>
                     <h2 className="text-md font-medium mb-4">Main Course</h2>
-                    {order?.mainCourse.map((course) => (
+                    {order?.mainCourse.map((course,index) => (
                     <div key={course.id} className="flex items-center mb-2">
         
-                        <label htmlFor={`course-${course.id}`}>{course.id} {course.name}  - {course.price}</label>
+                        <label htmlFor={`course-${course.id}`}>{index+1}. {course.name}  - {course.price}</label>
                     </div>
                     ))}
                 </div>
                 <div>
                     <h2 className="text-md font-medium mb-4">Dessert</h2>
-                    {order?.dessert.map((dessert) => (
+                    {order?.dessert.map((dessert,index) => (
                     <div key={dessert.id} className="flex items-center mb-2">
-                    <label htmlFor={`dessert-${dessert.id}`}>{dessert.id}. {dessert.name} -  {dessert.price}</label>
+                    <label htmlFor={`dessert-${dessert.id}`}>{index+1}. {dessert.name} -  {dessert.price}</label>
                 </div>
                 ))}
             </div>
